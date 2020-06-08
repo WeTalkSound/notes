@@ -9,7 +9,7 @@ export default function CategoryPreview ({ category, ...props }) {
       <img className="img-fluid img-round" style={{borderRadius: '10px'}} alt={category.name} src={`https://services.etin.space/wts/extra/${category.slug}.jpg`} />
         <h6 className="mb-0" dangerouslySetInnerHTML={{ __html: category.name }}>
         </h6>
-        <small>{ `${category.count} Article(s)` }</small>
+        <small>{ `${category.count} Article${category.count === 1 ? '' : 's'}` }</small>
       </Link>
       <div dangerouslySetInnerHTML={{ __html: category.description }}>
       </div>
