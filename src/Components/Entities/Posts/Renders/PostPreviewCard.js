@@ -12,12 +12,13 @@ export default class PostPreviewCard extends Component {
           <span>
             <small>{this.props.post.category}</small>
           </span>
+          <p className="card-subtitle">
+            <small>{this.props.post.author} - <PostDate date={this.props.post.datePublished} /></small>
+          </p>
           <Link to={this.props.post.link}>
             <h5 className="card-title" dangerouslySetInnerHTML={{ __html: this.props.post.title }}></h5>
           </Link>
-          <p className="card-subtitle">
-            {this.props.post.author} - <PostDate date={this.props.post.datePublished} />
-          </p>
+          <hr />
           <div className="card-text" dangerouslySetInnerHTML={{ __html: this.props.post.excerpt }}>
           </div>
           <Link to={this.props.post.link}>
