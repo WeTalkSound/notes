@@ -7,7 +7,9 @@ export default function Navbar() {
       <div className="Navbar">
         <div className="container">
           <div class="Navleft"> 
-            <img src="https://services.etin.space/wts/wp-content/uploads/2020/06/logo.png" alt="WTS Blog" class="img-fluid" />
+            <Link to="/">
+              <img src="https://services.etin.space/wts/wp-content/uploads/2020/06/logo.png" alt="WTS Blog" class="img-fluid" />
+            </Link>
           </div>
           <div class="Navright">
             <div class="NavLinks">
