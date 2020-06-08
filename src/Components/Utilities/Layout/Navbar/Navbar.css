@@ -37,6 +37,10 @@
     line-height: 2;
 }
 
+.Navbar .logo {
+  line-height: 0;
+}
+
 .NavLinks ul {
   display: flex;
   list-style: none;
