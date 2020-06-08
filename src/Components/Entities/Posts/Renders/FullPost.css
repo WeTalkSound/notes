@@ -15,6 +15,11 @@
   line-height: 1.5;
 }
 
+.FullPost header {
+  background-color: var(--black);
+  color: var(--off-white);
+}
+
 .FullPost header img {
   border-radius: 10px;
 }
