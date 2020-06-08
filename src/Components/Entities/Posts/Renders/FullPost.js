@@ -24,10 +24,11 @@ export default function FullPost({ post }) {
       <header className="py-5">
         <div className="container">
           <div className="row align-items-md-center">
-            <div className="col-12 col-md-6">
+            <div className="col-12 col-md-6 mb-3">
               <img class="img-fluid" alt={post.title.rendered} src={post['_embedded']['wp:featuredmedia'][0]?.source_url} />
             </div>
-            <div className="col-12 col-md-6">
+            <div className="col-12 col-md-6 mb-3">
+              <span className="category">{post['_embedded']['wp:term'][0][0].name}</span>
               <h1
                 dangerouslySetInnerHTML={{ __html: post.title.rendered }}
               >
