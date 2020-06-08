@@ -18,3 +18,13 @@
 .FullPost header img {
   border-radius: 10px;
 }
+
+.FullPost span.category {
+  border-radius: 10px;
+  border: solid 1.5px;
+  padding: 0 5px;
+  border-radius: 10px;
+  border: solid 1.5px;
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
