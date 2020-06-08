@@ -6,13 +6,13 @@ export default function Navbar() {
     return (
       <div className="Navbar">
         <div className="container">
-          <div class="Navleft"> 
-            <Link to="/">
+          <div className="Navleft"> 
+            <Link className="logo" to="/">
               <img src="https://services.etin.space/wts/wp-content/uploads/2020/06/logo.png" alt="WTS Blog" class="img-fluid" />
             </Link>
           </div>
-          <div class="Navright">
-            <div class="NavLinks">
+          <div className="Navright">
+            <div className="NavLinks">
               <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About Us</Link></li>
