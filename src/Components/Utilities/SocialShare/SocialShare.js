@@ -7,7 +7,7 @@ export default function SocialShare(props) {
             <a
                 href={"https://www.facebook.com/sharer/sharer.php?u=" + props.url + "&quote=" + encodeURI(props.text) + " #" + props.tag + ""}
                 // className="social mb-2 facebook btn-floating"
-                className="social mb-2 facebook btn"
+                className="social facebook"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -17,7 +17,7 @@ export default function SocialShare(props) {
             <a
                 href={"https://twitter.com/intent/tweet?text=" + encodeURI(props.text) + "&url=" + props.url + "&hashtags=" + props.tag + ""}
                 // className="social mb-2 twitter btn-floating"
-                className="social mb-2 twitter btn"
+                className="social twitter"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -27,7 +27,7 @@ export default function SocialShare(props) {
             <a
                 href={"whatsapp://send?text=" + encodeURI(props.text) + " " + props.url + ""}
                 // className="social mb-2 whatsapp btn-floating"
-                className="social mb-2 whatsapp btn"
+                className="social whatsapp"
                 target="_blank"
                 rel="noopener noreferrer"
             >
