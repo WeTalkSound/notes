@@ -28,7 +28,7 @@ export default function FullPost({ post }) {
               <img class="img-fluid" alt={post.title.rendered} src={post['_embedded']['wp:featuredmedia'][0]?.source_url} />
             </div>
             <div className="col-12 col-md-6 mb-3">
-              <span className="category">{post['_embedded']['wp:term'][0][0].name}</span>
+              <span className="category"><small>{post['_embedded']['wp:term'][0][0].name}</small></span>
               <h1
                 dangerouslySetInnerHTML={{ __html: post.title.rendered }}
               >
