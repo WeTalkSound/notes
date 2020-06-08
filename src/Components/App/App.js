@@ -110,13 +110,13 @@ class App extends Component {
           <title>WeTalkSound | Nigeria's Biggest Music Community</title>
           <meta property="og:title" content="WeTalkSound | Nigeria's Biggest Music Community" />
           <meta property="og:description"
-            content="A Seed, learning to become a Tree. I write about the experiences that shape me." />
-          <meta name="description" content="A Seed, learning to become a Tree. I write about the experiences that shape me." />
+            content="Feel The Beat Of Nigeria's Biggest Music Community." />
+          <meta name="description" content="Feel The Beat Of Nigeria's Biggest Music Community." />
           <meta property="og:image" content="%PUBLIC_URL%/icons/thumbnail.png" />
           <meta property="og:url" content="%PUBLIC_URL%" />
           <meta name="twitter:title" content="WeTalkSound | Nigeria's Biggest Music Community" />
           <meta name="twitter:description"
-            content="A Seed, learning to become a Tree. I write about the experiences that shape me." />
+            content="Feel The Beat Of Nigeria's Biggest Music Community." />
           <meta name="twitter:image" content="%PUBLIC_URL%/icons/thumbnail.png" />
           <meta property="og:site_name" content="WeTalkSound | Nigeria's Biggest Music Community" />
           <meta name="twitter:image:alt" content="WeTalkSound | Nigeria's Biggest Music Community" />
