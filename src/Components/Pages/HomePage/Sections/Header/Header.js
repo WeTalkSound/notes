@@ -7,7 +7,7 @@ export default class Header extends Component{
         <div className="container-fluid justify-content-center align-self-center">
           <div className="row">
             <div className="col-12 text-center">
-              <h2>Insight From</h2>
+              <h2>Feel The Beat Of</h2>
               <h1>Nigeria's Biggest Music Community.</h1>
               <a href="mailto:wetalksound@gmail.com" className="btn btn-primary">Subscribe!</a>
             </div>
