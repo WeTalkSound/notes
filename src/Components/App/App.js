@@ -5,6 +5,7 @@ import { Switch, Route, BrowserRouter, StaticRouter } from 'react-router-dom';
 import HomePage from 'Components/Pages/HomePage/HomePage';
 import AllPostsPage from 'Components/Pages/AllPostsPage/AllPostsPage';
 import PostPage from 'Components/Pages/PostPage/PostPage';
+import CategoryPage from 'Components/Pages/CategoryPage/CategoryPage';
 import DefaultPage from 'Components/Pages/DefaultPage/DefaultPage';
 import { BlogProvider } from 'Components/Contexts/BlogContext';
 import BlogService from 'Services/BlogService';
@@ -25,6 +26,7 @@ const AppRoutes = () => (
           <AllPostsPage />
         </Route>
         <Route exact path='/posts/:slug' component={PostPage} />
+        <Route exact path='/categories/:slug' component={CategoryPage} />
         <Route component={DefaultPage} />
       </Switch>
     </main>
@@ -41,7 +43,8 @@ class App extends Component {
       posts: this.props.initialState.posts ?? [],
       currentPost: this.props.initialState.currentPost,
       categories: this.props.initialState.categories ?? [],
-      categoriesLoaded: true
+      categoriesLoaded: true,
+      currentCategory: this.props.initialState.currentCategory
     };
   }
 
@@ -53,6 +56,14 @@ class App extends Component {
         this.setState({ categories, categoriesLoaded, error: "" })
       })
       .catch(error => this.setState({ error: "There was an error fetching categories. Please try again." }))
+  }
+
+  getCategoryWithPosts = (categoryId) => {
+    this.blogService.getCategoryWithPosts(categoryId)
+      .then(data => {
+        let currentCategory = data
+        this.setState({ currentCategory })
+      })
   }
 
   getPosts = () => {
@@ -99,10 +110,12 @@ class App extends Component {
             categories: this.state.categories,
             posts: this.state.posts,
             currentPost: this.state.currentPost,
+            currentCategory: this.state.currentCategory,
             notFound: this.state.notFound,
             getPosts: this.getPosts,
             getCategories: this.getCategories,
             getPost: this.getPost,
+            getCategoryWithPosts: this.getCategoryWithPosts,
           }
         }
       >

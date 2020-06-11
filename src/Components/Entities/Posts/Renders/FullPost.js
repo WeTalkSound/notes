@@ -14,11 +14,11 @@ export default function FullPost({ post }) {
         <meta name="description" content={post.excerpt.rendered} />
         <meta property="og:title" content={`${post.title.rendered} - WeTalk Sound`} />
         <meta property="og:description" content={post.excerpt.rendered} />
-        <meta property="og:image" content={`https://services.etin.space/notes/generate-image/?title=${encodeURI(post.title.rendered)}`} />
-        <meta property="og:url" content={`https://notes.etin.space/posts/${post.slug}`} />
+        <meta property="og:image" content={`https://blog-admin.wetalksound.co/generate-image/?title=${encodeURI(post.title.rendered)}`} />
+        <meta property="og:url" content={`https://blog.wetalksound.co/posts/${post.slug}`} />
         <meta name="twitter:title" content={`${post.title.rendered} - WeTalk Sound`} />
         <meta name="twitter:description" content={post.excerpt.rendered} />
-        <meta name="twitter:image" content={`https://services.etin.space/notes/generate-image/?title=${encodeURI(post.title.rendered)}`} />
+        <meta name="twitter:image" content={`https://blog-admin.wetalksound.co/generate-image/?title=${encodeURI(post.title.rendered)}`} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <header className="py-5 mb-5">

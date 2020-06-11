@@ -13,7 +13,7 @@ export default class PostList extends Component {
   static contextType = BlogContext
 
   render() {
-    let posts = this.context.posts ?? [];
+    let posts = this.props.posts ?? this.context.posts ?? [];
     const Post = this.props.renderAs
     const Layout = this.props.layout.component
     return (
