@@ -1,6 +1,6 @@
 .Navbar {
-    height: 90px;
-    line-height: 90px;
+    height: 65px;
+    line-height: 65px;
     background-color: var(--black);
     color: var(--white);
     text-align: center;
@@ -66,8 +66,8 @@
 }
 
 .Navbar img {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
 }
 
 .Navbar .collapse-menu {
@@ -84,8 +84,8 @@
 
 @media screen and (min-width: 48em) {
   .Navbar {
-    height: 90px;
-    line-height: 90px;
+    height: 65px;
+    line-height: 65px;
   }
 
   .Navbar .container {

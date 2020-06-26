@@ -27,7 +27,7 @@ html, body{
 }
 
 body {
-	padding-top: 90px;
+	padding-top: 65px;
 	font-family: var(--body-font);
 	background-color: var(--off-black);
 	color: var(--off-white);
@@ -145,6 +145,6 @@ h1, h2{
 
 @media screen and (min-width: 48em) {
   body {
-    padding-top: 90px;
+    padding-top: 65px;
   }
 }
