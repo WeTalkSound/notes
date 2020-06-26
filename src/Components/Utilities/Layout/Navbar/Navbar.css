@@ -1,6 +1,6 @@
 .Navbar {
-    height: 110px;
-    line-height: 110px;
+    height: 90px;
+    line-height: 90px;
     background-color: var(--black);
     color: var(--white);
     text-align: center;
@@ -68,6 +68,18 @@
 .Navbar img {
   height: 60px;
   width: 60px;
+}
+
+.Navbar .collapse-menu {
+  position: absolute;
+  top: 0;
+  left: 25px;
+}
+
+.Navbar .search-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
 }
 
 @media screen and (min-width: 48em) {

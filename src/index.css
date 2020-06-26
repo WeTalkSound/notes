@@ -27,7 +27,7 @@ html, body{
 }
 
 body {
-	padding-top: 110px;
+	padding-top: 90px;
 	font-family: var(--body-font);
 	background-color: var(--off-black);
 	color: var(--off-white);
@@ -46,7 +46,7 @@ p {
 a {
 	color: var(--off-white);
 	text-decoration: none;
-	border-bottom: 3px solid var(--accent);
+	border-bottom: 2px solid var(--accent);
 	transition: .4s cubic-bezier(0.19, 1, 0.22, 1)
 }
 
