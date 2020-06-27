@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import Overlay from 'Components/Utilities/Overlay/Overlay'
+import Flex from 'Components/Utilities/Layout/Containers/Flex'
 
 export default function Navbar() {
 
@@ -36,16 +37,23 @@ export default function Navbar() {
               <i className="fas fa-search"></i>
             </div>
           </div>
+          <div className="Drawer">
+            {
+              openDrawer ?
+                <Overlay close={ () => {setOpenDrawer(false)} }>
+                  <Flex 
+                    alignItems="center"
+                    justifyContent="center"
+                  >
+                    <NavLinks />
+                  </Flex>
+                </Overlay>
+                :
+                ''
+            }
+          </div>
         </div>
       </div>
-      {
-        openDrawer ?
-          <Overlay close={ () => {setOpenDrawer(false)} }>
-            <NavLinks />
-          </Overlay>
-          :
-          ''
-      }
     </>
   )
 }
