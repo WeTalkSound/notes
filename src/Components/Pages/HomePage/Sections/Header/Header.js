@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Header.css';
+import SubscribeToNewsletter from 'Components/Entities/NewsletterSubscriptions/SubscribeToNewsletter';
+import SubscribeButtonWithOverlay from 'Components/Entities/NewsletterSubscriptions/Renders/SubscribeButtonWithOverlay';
 export default class Header extends Component{
   render() {
     return (
@@ -9,7 +11,13 @@ export default class Header extends Component{
             <div className="col-12 text-center">
               <h2>Feel The Beat Of</h2>
               <h1>Nigeria's Biggest Music Community.</h1>
-              <a href="mailto:wetalksound@gmail.com" className="btn btn-primary">Subscribe!</a>
+              <SubscribeToNewsletter 
+                renderAs={SubscribeButtonWithOverlay}
+                layout={{
+                  component: React.Fragment,
+                  props:{}
+                }}
+              />
             </div>
           </div>
         </div>
