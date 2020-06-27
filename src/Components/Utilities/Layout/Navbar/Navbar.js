@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
+import Overlay from 'Components/Utilities/Overlay/Overlay'
 
 export default function Navbar() {
-    return (
+
+  const [ openDrawer, setOpenDrawer ] = useState(false)
+
+  const NavLinks = () => (
+    <ul>
+      <li><Link onClick={ () => {setOpenDrawer(false)} } to="/">Home</Link></li>
+      <li><Link onClick={ () => {setOpenDrawer(false)} } to="/about">About Us</Link></li>
+      <li><Link onClick={ () => {setOpenDrawer(false)} } to="/posts">Posts</Link></li>
+      <li><Link onClick={ () => {setOpenDrawer(false)} } to="/categories">Categories</Link></li>
+    </ul>
+  )
+
+  return (
+    <>
       <div className="Navbar">
         <div className="container">
           <div className="Navleft"> 
@@ -13,21 +27,25 @@ export default function Navbar() {
           </div>
           <div className="Navright">
             <div className="NavLinks d-sm-block d-none">
-              <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About Us</Link></li>
-                <li><Link to="/posts">Posts</Link></li>
-                <li><Link to="/categories">Categories</Link></li>
-              </ul>
+              <NavLinks />
             </div>
-            <div className="collapse-menu d-block dm-sm-none">
-              <i className="fas fa-bars"></i>
+            <div className="collapse-menu d-block d-sm-none">
+              <i onClick={ () => { setOpenDrawer(true) } } className="fas fa-bars"></i>
             </div>
-            <div className="search-btn d-block dm-sm-none">
+            <div className="search-btn d-block d-sm-none">
               <i className="fas fa-search"></i>
             </div>
           </div>
         </div>
       </div>
-    )
+      {
+        openDrawer ?
+          <Overlay close={ () => {setOpenDrawer(false)} }>
+            <NavLinks />
+          </Overlay>
+          :
+          ''
+      }
+    </>
+  )
 }
