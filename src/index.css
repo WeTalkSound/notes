@@ -92,6 +92,22 @@ h1, h2{
   font-weight: 700;
 }
 
+input[type="text"] , input[type="email"] {
+  background: transparent;
+  border-color: transparent;
+  color: var(--white);
+  border-bottom-color: var(--white);
+}
+
+input[type="text"]:focus , input[type="email"]:focus {
+  background: transparent;
+  border-color: transparent;
+  border-bottom-color: var(--primary);
+  color: var(--white);
+  outline-color: transparent;
+  box-shadow: none;
+}
+
 .colored{
 	color: var(--primary);
 	text-shadow: var(--shadow) #000;
