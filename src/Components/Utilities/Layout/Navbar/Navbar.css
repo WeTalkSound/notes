@@ -106,4 +106,8 @@
   .NavLinks ul > li {
     margin-right: 35px;
   }
+
+  .Navbar .Navright {
+    margin-left: auto;
+  }
 }
