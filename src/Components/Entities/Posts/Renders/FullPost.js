@@ -4,21 +4,22 @@ import PostDate from './PostDate'
 import PostAuthor from './PostAuthor'
 import SocialShare from 'Components/Utilities/SocialShare/SocialShare'
 import SyntaxHighlight from 'Components/Utilities/SyntaxHighlight/SyntaxHighlight'
+import { htmlDecode } from 'Helpers/Helpers'
 import './FullPost.css'
 
 export default function FullPost({ post }) {
   return (
     <div className="FullPost">
       <Helmet>
-        <title>{post.title.rendered} - WeTalk Sound</title>
+        <title>{htmlDecode(post.title.rendered)} - WeTalk Sound</title>
         <meta name="description" content={post.excerpt.rendered} />
-        <meta property="og:title" content={`${post.title.rendered} - WeTalk Sound`} />
+        <meta property="og:title" content={`${htmlDecode(post.title.rendered)} - WeTalk Sound`} />
         <meta property="og:description" content={post.excerpt.rendered} />
-        <meta property="og:image" content={`https://blog-admin.wetalksound.co/generate-image/?title=${encodeURI(post.title.rendered)}`} />
+        <meta property="og:image" content={`https://blog-admin.wetalksound.co/generate-image/?title=${encodeURI(htmlDecode(post.title.rendered))}`} />
         <meta property="og:url" content={`https://blog.wetalksound.co/posts/${post.slug}`} />
-        <meta name="twitter:title" content={`${post.title.rendered} - WeTalk Sound`} />
+        <meta name="twitter:title" content={`${htmlDecode(post.title.rendered)} - WeTalk Sound`} />
         <meta name="twitter:description" content={post.excerpt.rendered} />
-        <meta name="twitter:image" content={`https://blog-admin.wetalksound.co/generate-image/?title=${encodeURI(post.title.rendered)}`} />
+        <meta name="twitter:image" content={`https://blog-admin.wetalksound.co/generate-image/?title=${encodeURI(htmlDecode(post.title.rendered))}`} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <header className="py-5 mb-5">
@@ -61,7 +62,7 @@ export default function FullPost({ post }) {
         </div>
         <div className="row">
           <div className="col-12">
-            <SocialShare text={"Read " + post.title.rendered + " on WeTalk Sound"} url={`https://blog.wetalksound.co/posts/${post.slug}`} tag={"#EtinNotes"} />
+            <SocialShare text={"Read " + htmlDecode(post.title.rendered) + " on WeTalk Sound"} url={`https://blog.wetalksound.co/posts/${post.slug}`} tag={"#EtinNotes"} />
           </div>
         </div>
       </div>
