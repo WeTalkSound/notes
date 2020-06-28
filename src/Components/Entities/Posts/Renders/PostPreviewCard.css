@@ -18,6 +18,11 @@
   margin-bottom: 10px;
 }
 
+.PostPreviewCard .card-title {
+  margin-bottom: .75rem;
+  margin-top: .75rem;
+}
+
 .PostPreviewCard .card-body {
   padding: 1.25rem 0;
 }

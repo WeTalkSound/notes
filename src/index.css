@@ -153,9 +153,9 @@ input[type="text"]:focus , input[type="email"]:focus {
 	color: var(--white);
 }
 
-.Header, section{
+.Header, header, section{
 	margin-bottom: var(--space);
-  padding: calc(2 * var(--space)) 0;
+  padding: calc(var(--space) / 2) 0;
 }
 
 

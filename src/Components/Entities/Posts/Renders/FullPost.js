@@ -22,7 +22,7 @@ export default function FullPost({ post }) {
         <meta name="twitter:image" content={`https://blog-admin.wetalksound.co/generate-image/?title=${encodeURI(htmlDecode(post.title.rendered))}`} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <header className="py-5 mb-5">
+      <header>
         <div className="container">
           <div className="row align-items-md-center">
             <div className="col-12 col-md-6 mb-3">
@@ -62,6 +62,7 @@ export default function FullPost({ post }) {
         </div>
         <div className="row">
           <div className="col-12">
+            <h5>Share this article:</h5>
             <SocialShare text={"Read " + htmlDecode(post.title.rendered) + " on WeTalk Sound"} url={`https://blog.wetalksound.co/posts/${post.slug}`} tag={"#EtinNotes"} />
           </div>
         </div>
