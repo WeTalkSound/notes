@@ -10,3 +10,9 @@ footer .container .row {
 footer p {
   margin: 0;
 }
+
+footer a {
+    border-bottom: none;
+    font-size: 12px;
+    color: var(--accent);
+}
