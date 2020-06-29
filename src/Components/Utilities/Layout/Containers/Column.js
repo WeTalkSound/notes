@@ -7,15 +7,17 @@ export default function Column({ children, size, offset, ...props}) {
       clsNm += `col-${key}-${value} `
     }
   } else {
-    clsNm += `col-${size}`
+    clsNm += `col-${size} `
   }
 
-  if(typeof offset === "object") {
-    for (const [key, value] of Object.entries(size)) {
-      clsNm += `offset-${key}-${value} `
+  if (offset) {
+    if(typeof offset === "object") {
+      for (const [key, value] of Object.entries(offset)) {
+        clsNm += `offset-${key}-${value} `
+      }
+    } else {
+      clsNm += `offset-${offset}`
     }
-  } else {
-    clsNm += `offset-${size}`
   }
   return (
     <div {...props} className={clsNm}>
