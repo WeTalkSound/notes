@@ -24,7 +24,8 @@ export default function SubscribeButtonWithOverlay({ onSubmit, message, status  
                 justifyContent="center"
               >
                 <div>
-                  <p>Sign up to our newsletter below:</p>
+                  <h3>Subscribe to our newsletter and get the best of our community directly to your inbox.</h3>
+                  <p>Sign up with your email address:</p>
                   <input
                     placeholder="Your Email*"
                     onChange={updateEmailValue}
