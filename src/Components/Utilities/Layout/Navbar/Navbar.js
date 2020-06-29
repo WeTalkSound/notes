@@ -11,9 +11,16 @@ export default function Navbar() {
   const NavLinks = () => (
     <ul>
       <li><Link onClick={ () => {setOpenDrawer(false)} } to="/">Home</Link></li>
-      <li><Link onClick={ () => {setOpenDrawer(false)} } to="/about">About Us</Link></li>
-      <li><Link onClick={ () => {setOpenDrawer(false)} } to="/posts">Posts</Link></li>
-      <li><Link onClick={ () => {setOpenDrawer(false)} } to="/categories">Categories</Link></li>
+      <li><Link onClick={ () => {setOpenDrawer(false)} } to="/posts">All Posts</Link></li>
+      <li><Link onClick={ () => {setOpenDrawer(false)} } to="/categories/music">Music</Link></li>
+      <li><Link onClick={ () => {setOpenDrawer(false)} } to="/categories/insights">Insights</Link></li>
+      <li><Link onClick={ () => {setOpenDrawer(false)} } to="/categories/conversations">Conversations</Link></li>
+      <li><Link onClick={ () => {setOpenDrawer(false)} } to="/categories/community">Community</Link></li>
+      <li>
+        <a className="mr-3" href="https://facebook.com/wetalksound"><i className="fab fa-facebook"></i></a>&nbsp;
+        <a className="mr-3" href="https://twitter.com/wetalksound"><i className="fab fa-twitter"></i></a>&nbsp;
+        <a className="mr-3" href="https://instagram.com/wetalksound"><i className="fab fa-instagram"></i></a>
+      </li>
     </ul>
   )
 
