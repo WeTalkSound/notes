@@ -3,6 +3,10 @@ footer {
   color: var(--white);
 } 
 
+footer .container .row {
+  padding: 15px 0;
+}
+
 footer p {
   margin: 0;
 }

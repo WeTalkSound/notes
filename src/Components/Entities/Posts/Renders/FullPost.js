@@ -63,7 +63,7 @@ export default function FullPost({ post }) {
         <div className="row">
           <div className="col-12">
             <h5>Share this article:</h5>
-            <SocialShare text={"Read " + htmlDecode(post.title.rendered) + " on WeTalk Sound"} url={`https://blog.wetalksound.co/posts/${post.slug}`} tag={"#EtinNotes"} />
+            <SocialShare text={"Read " + htmlDecode(post.title.rendered) + " on WeTalk Sound"} url={`https://blog.wetalksound.co/posts/${post.slug}`} tag={"WTS"} />
           </div>
         </div>
       </div>
