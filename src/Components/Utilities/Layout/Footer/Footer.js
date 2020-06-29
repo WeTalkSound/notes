@@ -1,13 +1,14 @@
 import React from 'react'
 import './Footer.css'
-import ContainerRow from 'Components/Utilities/Layout/Containers/ContainerRow'
+import Row from 'Components/Utilities/Layout/Containers/Row'
 import { Link } from 'react-router-dom'
+import Container from 'Components/Utilities/Layout/Containers/Container'
 
 export default function Footer() {
   return (
     <footer>
-      <div className="container">
-        <ContainerRow>
+      <Container>
+        <Row>
           <div className="col-sm-4">
             <h5>WeTalkSound</h5>
             <p>
@@ -38,15 +39,15 @@ export default function Footer() {
               <Link to="/contribute">Contribute</Link>
             </p>
           </div>
-        </ContainerRow>
-        <ContainerRow>
+        </Row>
+        <Row>
           <div className="col-12 text-center">
             <p>
               &copy; 2020, WeTalkSound
             </p>
           </div>
-        </ContainerRow>
-      </div>
+        </Row>
+      </Container>
     </footer>
   )
 }
