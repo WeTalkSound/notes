@@ -15,11 +15,11 @@ export default function FullPost({ post }) {
         <meta name="description" content={post.excerpt.rendered} />
         <meta property="og:title" content={`${htmlDecode(post.title.rendered)} - WeTalk Sound`} />
         <meta property="og:description" content={post.excerpt.rendered} />
-        <meta property="og:image" content={`https://blog-admin.wetalksound.co/generate-image/?title=${encodeURI(htmlDecode(post.title.rendered))}`} />
+        <meta property="og:image" content={post.title.rendered} src={post['_embedded']['wp:featuredmedia'][0]?.source_url} />
         <meta property="og:url" content={`https://blog.wetalksound.co/posts/${post.slug}`} />
         <meta name="twitter:title" content={`${htmlDecode(post.title.rendered)} - WeTalk Sound`} />
         <meta name="twitter:description" content={post.excerpt.rendered} />
-        <meta name="twitter:image" content={`https://blog-admin.wetalksound.co/generate-image/?title=${encodeURI(htmlDecode(post.title.rendered))}`} />
+        <meta name="twitter:image" content={post.title.rendered} src={post['_embedded']['wp:featuredmedia'][0]?.source_url} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <header>
