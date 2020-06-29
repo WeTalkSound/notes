@@ -125,12 +125,12 @@ class App extends Component {
           <meta property="og:description"
             content="Feel The Beat Of Nigeria's Biggest Music Community." />
           <meta name="description" content="Feel The Beat Of Nigeria's Biggest Music Community." />
-          <meta property="og:image" content="%PUBLIC_URL%/icons/thumbnail.png" />
-          <meta property="og:url" content="%PUBLIC_URL%" />
+          <meta property="og:image" content="https://blog-admin.wetalksound.co/extra/thumbnail.png" />
+          <meta property="og:url" content="https://blog.wetalksound.co" />
           <meta name="twitter:title" content="WeTalkSound | Nigeria's Biggest Music Community" />
           <meta name="twitter:description"
             content="Feel The Beat Of Nigeria's Biggest Music Community." />
-          <meta name="twitter:image" content="%PUBLIC_URL%/icons/thumbnail.png" />
+          <meta name="twitter:image" content="https://blog-admin.wetalksound.co/extra/thumbnail.png" />
           <meta property="og:site_name" content="WeTalkSound | Nigeria's Biggest Music Community" />
           <meta name="twitter:image:alt" content="WeTalkSound | Nigeria's Biggest Music Community" />
         </Helmet>

@@ -11,15 +11,15 @@ export default function FullPost({ post }) {
   return (
     <div className="FullPost">
       <Helmet>
-        <title>{htmlDecode(post.title.rendered)} - WeTalk Sound</title>
+        <title>{htmlDecode(post.title.rendered)} - WeTalkSound</title>
         <meta name="description" content={post.excerpt.rendered} />
-        <meta property="og:title" content={`${htmlDecode(post.title.rendered)} - WeTalk Sound`} />
+        <meta property="og:title" content={`${htmlDecode(post.title.rendered)} - WeTalkSound`} />
         <meta property="og:description" content={post.excerpt.rendered} />
-        <meta property="og:image" content={post.title.rendered} src={post['_embedded']['wp:featuredmedia'][0]?.source_url} />
+        <meta property="og:image" content={post['_embedded']['wp:featuredmedia'][0]?.source_url} />
         <meta property="og:url" content={`https://blog.wetalksound.co/posts/${post.slug}`} />
-        <meta name="twitter:title" content={`${htmlDecode(post.title.rendered)} - WeTalk Sound`} />
+        <meta name="twitter:title" content={`${htmlDecode(post.title.rendered)} - WeTalkSound`} />
         <meta name="twitter:description" content={post.excerpt.rendered} />
-        <meta name="twitter:image" content={post.title.rendered} src={post['_embedded']['wp:featuredmedia'][0]?.source_url} />
+        <meta name="twitter:image" content={post['_embedded']['wp:featuredmedia'][0]?.source_url} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <header>
@@ -63,7 +63,7 @@ export default function FullPost({ post }) {
         <div className="row">
           <div className="col-12">
             <h5>Share this article:</h5>
-            <SocialShare text={"Read " + htmlDecode(post.title.rendered) + " on WeTalk Sound"} url={`https://blog.wetalksound.co/posts/${post.slug}`} tag={"WTS"} />
+            <SocialShare text={"Read " + htmlDecode(post.title.rendered) + " on WeTalkSound"} url={`https://blog.wetalksound.co/posts/${post.slug}`} tag={"WTS"} />
           </div>
         </div>
       </div>
