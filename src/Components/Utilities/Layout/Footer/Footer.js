@@ -4,6 +4,8 @@ import Row from 'Components/Utilities/Layout/Containers/Row'
 import { Link } from 'react-router-dom'
 import Container from 'Components/Utilities/Layout/Containers/Container'
 import Column from 'Components/Utilities/Layout/Containers/Column'
+import SubscribeToNewsletter from 'Components/Entities/NewsletterSubscriptions/SubscribeToNewsletter'
+import SubscribeButtonWithOverlay from 'Components/Entities/NewsletterSubscriptions/Renders/SubscribeButtonWithOverlay'
 
 export default function Footer() {
   return (
@@ -17,7 +19,13 @@ export default function Footer() {
               contribution to documenting and sharing knowledge regarding our rich
               musical heritage.
             </p>
-            <a href="https://wetalksound.co/" className="btn btn-primary">Subscribe</a>
+            <SubscribeToNewsletter
+              renderAs={SubscribeButtonWithOverlay}
+              layout={{
+                component: React.Fragment,
+                props:{}
+              }}
+            />
           </Column>
           <Column size={{sm: "3", md:"2"}}>
             <h6>Blog</h6>
