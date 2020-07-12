@@ -45,7 +45,7 @@ export default function Footer() {
               <Link to="/categories/insights">Insights</Link>
             </p>
             <p>
-              <Link to="/categories/conversation">Conversation</Link>
+              <Link to="/categories/conversations">Conversations</Link>
             </p>
             <p>
               <Link to="/categories/community">Community</Link>

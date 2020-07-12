@@ -4,6 +4,9 @@ import PostList from "Components/Entities/Posts/PostList"
 import CardColumns from "Components/Utilities/Layout/Containers/CardColumns"
 import PostPreviewCard from "Components/Entities/Posts/Renders/PostPreviewCard"
 import './CategoryDetails.css'
+import ContainerWithRow from 'Components/Utilities/Layout/Containers/ContainerWithRow'
+import Column from 'Components/Utilities/Layout/Containers/Column'
+import Section from 'Components/Utilities/Layout/Containers/Section'
 
 export default function CategoryDetails({ category }) {
   console.log(category)
@@ -39,9 +42,9 @@ export default function CategoryDetails({ category }) {
           </div>
         </div>
       </header>
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
+      <Section style={{padding: "50px 0"}}>
+        <ContainerWithRow>
+          <Column>
             <h4 className="text-center">Articles From This Category</h4>
             <PostList
               posts= {category.posts}
@@ -51,9 +54,9 @@ export default function CategoryDetails({ category }) {
               }}
               renderAs={PostPreviewCard}
             />
-          </div>
-        </div>
-      </div>
+          </Column>
+        </ContainerWithRow>
+      </Section>
     </div>
   )
 }

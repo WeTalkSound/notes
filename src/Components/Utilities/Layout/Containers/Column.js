@@ -4,6 +4,10 @@ export default function Column({ children, size, className, offset, ...props}) {
   let clsNm = ``
   if(typeof size === "object") {
     for (const [key, value] of Object.entries(size)) {
+      if (key === 'xs') {
+        clsNm += `col-${value} `
+        continue
+      }
       clsNm += `col-${key}-${value} `
     }
   } else {
@@ -13,6 +17,10 @@ export default function Column({ children, size, className, offset, ...props}) {
   if (offset) {
     if(typeof offset === "object") {
       for (const [key, value] of Object.entries(offset)) {
+      if (key === 'xs') {
+        clsNm += `offset-${value} `
+        continue
+      }
         clsNm += `offset-${key}-${value} `
       }
     } else {

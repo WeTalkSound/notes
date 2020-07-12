@@ -1,10 +1,11 @@
 import React from 'react'
 import Category from 'Components/Entities/Categories/Category';
 import CategoryDetails from 'Components/Entities/Categories/Renders/CategoryDetails';
+import Section from 'Components/Utilities/Layout/Containers/Section';
 
 export default function CategoryPage({ match }) {
   return (
-    <div className="Category">
+    <Section className="Category">
       <Category 
         match={match}
         layout={{
@@ -13,6 +14,6 @@ export default function CategoryPage({ match }) {
         }}
         renderAs={CategoryDetails}
       />
-    </div>
+    </Section>
   )
 }

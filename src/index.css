@@ -153,12 +153,6 @@ input[type="text"]:focus , input[type="email"]:focus {
 	color: var(--white);
 }
 
-.Header, header, section{
-	margin-bottom: var(--space);
-  padding: calc(var(--space) / 2) 0;
-}
-
-
 @media screen and (min-width: 48em) {
   body {
     padding-top: 65px;
