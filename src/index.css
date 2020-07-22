@@ -153,6 +153,34 @@ input[type="text"]:focus , input[type="email"]:focus {
 	color: var(--white);
 }
 
+ol.custom {
+	counter-reset: a;
+	list-style-type: none;
+	padding-inline-start: 3.5rem;
+	display: relative;
+}
+
+ol.custom li {
+	border-bottom: solid 1px var(--accent);
+}
+
+ol.custom li::before {
+	position: absolute;
+	left: 0;
+	counter-increment: a;
+	content: counter(a)'.';
+	color: var(--grey);
+	font-family: var(--heading-font);
+	font-size: 3rem;
+	font-weight: 700;
+	width: 4.0625rem;
+	text-align: center;
+	pointer-events: none;
+	height: 4.6875rem;
+	line-height: 4.6875rem;
+}
+
+
 @media screen and (min-width: 48em) {
   body {
     padding-top: 65px;

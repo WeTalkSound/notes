@@ -4,6 +4,7 @@ import Navbar from 'Components/Utilities/Layout/Navbar/Navbar';
 import { Switch, Route, BrowserRouter, StaticRouter } from 'react-router-dom';
 import HomePage from 'Components/Pages/HomePage/HomePage';
 import AllPostsPage from 'Components/Pages/AllPostsPage/AllPostsPage';
+import CreditsPage from 'Components/Pages/CreditsPage/CreditsPage';
 import PostPage from 'Components/Pages/PostPage/PostPage';
 import CategoryPage from 'Components/Pages/CategoryPage/CategoryPage';
 import DefaultPage from 'Components/Pages/DefaultPage/DefaultPage';
@@ -12,6 +13,7 @@ import BlogService from 'Services/BlogService';
 import Helmet from 'react-helmet'
 import Footer from 'Components/Utilities/Layout/Footer/Footer';
 import ScrollToTop from 'Components/Utilities/Routing/ScrollToTop'
+import ContributePage from 'Components/Pages/ContributePage/ContributePage';
 
 const AppRoutes = () => (
   <>
@@ -24,6 +26,12 @@ const AppRoutes = () => (
         </Route>
         <Route exact path='/posts'>
           <AllPostsPage />
+        </Route>
+        <Route exact path='/credits'>
+          <CreditsPage />
+        </Route>
+        <Route exact path='/contribute'>
+          <ContributePage />
         </Route>
         <Route exact path='/posts/:slug' component={PostPage} />
         <Route exact path='/categories/:slug' component={CategoryPage} />
