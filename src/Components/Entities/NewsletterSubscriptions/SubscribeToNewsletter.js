@@ -20,11 +20,7 @@ export default class SubscribeToNewsletter extends Component {
     }
     this.setState({ message:"Please wait", status: "Loading" })
     fetch("https://blog-admin.wetalksound.co/newsletter/subscribe.php?email=" + email, {
-      method: 'GET',
-      headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-      }
+      method: 'GET'
     })
     .then(res => res.json())
     .then(data => {
