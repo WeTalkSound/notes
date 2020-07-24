@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import PostDate from './PostDate'
 import PostAuthor from './PostAuthor'
+import PostAuthorBio from './PostAuthorBio'
 import SocialShare from 'Components/Utilities/SocialShare/SocialShare'
 import SyntaxHighlight from 'Components/Utilities/SyntaxHighlight/SyntaxHighlight'
 import { htmlDecode, strip_tags } from 'Helpers/Helpers'
@@ -65,12 +66,35 @@ export default function FullPost({ post }) {
               </div>
             </Column>
           </Row>
-          <div className="row">
-            <div className="col-12">
+        </Container>
+      </Section>
+      <Section bg="accent" color="black" style={{padding: "20px 0"}}>
+        <Container>
+          <Row>
+            <Column>
               <h5>Share this article:</h5>
               <SocialShare text={"Read " + htmlDecode(post.title.rendered) + " on WeTalkSound"} url={`https://blog.wetalksound.co/posts/${post.slug}`} tag={"WTS"} />
-            </div>
-          </div>
+            </Column>
+          </Row>
+        </Container>
+      </Section>
+      <Section bg="black" color="white" style={{padding: "20px 0"}}>
+        <Container>
+          <Row>
+            <Column>
+              <h3>About The Author</h3>
+              <PostAuthorBio
+                author={
+                  {
+                    name: post._embedded.author[0].name,
+                    description: post._embedded.author[0].description,
+                    slug: post._embedded.author[0].slug,
+                    avatar: post._embedded.author[0].avatar_urls[96],
+                  }
+                }
+              />
+            </Column>
+          </Row>
         </Container>
       </Section>
     </div>
