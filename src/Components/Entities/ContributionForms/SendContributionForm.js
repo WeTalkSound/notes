@@ -12,7 +12,7 @@ export default class SendContributionForm extends Component {
 
   sendMessage = newMessage => {
     this.setState({ message:"Please wait", status: "Loading" })
-    fetch("https://blog-admin.wetalksound.co/newsletter/ContactForm.php", {
+    fetch("https://blog-admin.wetalksound.co/xtra/contribution.php", {
       method: 'POST',
       headers: {
           'Accept': 'application/json',
@@ -24,7 +24,7 @@ export default class SendContributionForm extends Component {
       console.log(data)
       switch (data.status) {
           case "Success":
-            this.setState({ status: "Done", message: "Success! You'll receive an email for my next publication"})
+            this.setState({ status: "Done", message: "Success! We've received your contribution pitch. We should reach out shortly."})
             break;
 
           case "Duplicate":
@@ -36,7 +36,7 @@ export default class SendContributionForm extends Component {
         }
     })
     .catch(error => {
-      let message = "There was an error adding your email. Please try again."
+      let message = "There was an error sending your contribution. Please try again."
       this.setState({ message, status:"Error" })
     })
   }
