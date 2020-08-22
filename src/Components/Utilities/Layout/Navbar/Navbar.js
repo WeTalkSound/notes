@@ -30,7 +30,7 @@ export default function Navbar() {
         <div className="container">
           <div className="Navleft"> 
             <Link className="logo" to="/">
-              <img src="http://services.etin.space/demos/wts-logo.png" alt="WTS Blog" class="img-fluid" />
+              <img src="https://services.etin.space/demos/wts-logo.png" alt="WTS Blog" class="img-fluid" />
             </Link>
           </div>
           <div className="Navright">
