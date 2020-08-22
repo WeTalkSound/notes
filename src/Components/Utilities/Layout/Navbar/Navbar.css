@@ -68,8 +68,8 @@
 }
 
 .Navbar img {
-  height: 40px;
-  width: 40px;
+  height: auto;
+  width: 170px;
 }
 
 .Navbar .collapse-menu {
