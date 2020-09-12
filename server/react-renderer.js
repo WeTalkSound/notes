@@ -34,6 +34,7 @@ exports.render = (routes) => {
                 const location = req.url
 
                 let posts = []
+                let categories = []
                 let currentPost = null
                 
                 if (is404) {
@@ -45,6 +46,7 @@ exports.render = (routes) => {
                     console.log(`SSR of ${req.path}`)
                     if(req.path.includes('/posts') || req.path === '/'){
                         posts = await blogService.getPosts()
+                        categories = await blogService.getCategories()
                         if(match.includes(':slug')){
                           let slug = req.path.replace('/posts/', '')
                           currentPost = posts.find(post => post.slug === slug)
@@ -53,7 +55,7 @@ exports.render = (routes) => {
                     }
                 }
                 // console.log(posts)
-                const initialState = {posts: posts, currentPost:currentPost}
+                const initialState = {categories: categories, posts: posts, currentPost:currentPost}
                 const jsx = <App initialState={initialState} location={location} />
                 const reactDom = renderToString(jsx)
 
