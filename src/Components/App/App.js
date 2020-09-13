@@ -14,6 +14,7 @@ import Helmet from 'react-helmet'
 import Footer from 'Components/Utilities/Layout/Footer/Footer';
 import ScrollToTop from 'Components/Utilities/Routing/ScrollToTop'
 import ContributePage from 'Components/Pages/ContributePage/ContributePage';
+import SearchResultsPage from 'Components/Pages/SearchResultsPage/SearchResultsPage';
 
 const AppRoutes = () => (
   <>
@@ -35,6 +36,7 @@ const AppRoutes = () => (
         </Route>
         <Route exact path='/posts/:slug' component={PostPage} />
         <Route exact path='/categories/:slug' component={CategoryPage} />
+        <Route exact path='/search' component={SearchResultsPage} />
         <Route component={DefaultPage} />
       </Switch>
     </main>
@@ -109,6 +111,11 @@ class App extends Component {
       .catch(error => console.log(error))
   }
 
+  search = async (searchTerm) => {
+    let results = await this.blogService.search(searchTerm)
+    return results
+  }
+
   render() {
 
     return (
@@ -124,6 +131,7 @@ class App extends Component {
             getCategories: this.getCategories,
             getPost: this.getPost,
             getCategoryWithPosts: this.getCategoryWithPosts,
+            search: this.search
           }
         }
       >

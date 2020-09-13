@@ -6,6 +6,7 @@ export default class BlogService {
     POSTS_URL = this.BASE_API_URL + "posts/"
     CATEGORIES_URL = this.BASE_API_URL + "categories/"
     AUTHOR_URL = this.BASE_API_URL + "authors/"
+    SEARCH_URL = this.BASE_API_URL + "search/"
 
     getCategories = async (limit=100, offset=0) => {
         console.log("Getting categories")
@@ -56,5 +57,14 @@ export default class BlogService {
         })
         let data = await response.json()
         return data[0]
+    }
+
+    search = async (searchTerm, limit=100) => {
+      console.log("Searching")
+      let response = await fetch(this.POSTS_URL + "?_embed&search=" + encodeURIComponent(searchTerm) + "&per_page=" + limit, {
+          method: 'GET'
+      })
+      let data = await response.json()
+      return data
     }
 }

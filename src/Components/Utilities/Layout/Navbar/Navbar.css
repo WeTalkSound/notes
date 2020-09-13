@@ -84,13 +84,13 @@
   right: 25px;
 }
 
-.Navbar .Drawer ul {
+.Navbar .MenuDrawer ul {
   list-style: none;
   text-align: center;
   padding-left: 0;
 }
 
-.Navbar .Drawer li {
+.Navbar .MenuDrawer li {
   font-size: 25px;
   text-align: center;
 }

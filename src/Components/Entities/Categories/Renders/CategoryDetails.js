@@ -21,7 +21,7 @@ export default function CategoryDetails({ category }) {
         <meta property="og:url" content={`https://blog.wetalksound.co/categories/${category.slug}`} />
         <meta name="twitter:title" content={`${category.name} - WeTalk Sound`} />
         <meta name="twitter:description" content={category.description} />
-        <meta name="twitter:image" content={`https://blog-admin.wetalksound.co/generate-image/?title=${encodeURI(category.name)}`} />
+        <meta name="twitter:image" content={`https://blog-admin.wetalksound.co/extra/thumbnail.png`} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <header className="py-5">
