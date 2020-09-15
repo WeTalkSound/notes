@@ -21,6 +21,7 @@
 .PostPreviewCard .card-title {
   margin-bottom: .75rem;
   margin-top: .75rem;
+  font-family: var(--heading-font);
 }
 
 .PostPreviewCard .card-body {

@@ -57,13 +57,26 @@ export default function FullPost({ post }) {
           </Row>
         </Container>
       </header>
-      <Section style={{padding: "50px 0"}}>
+      <Section style={{padding: "25px 0"}}>
         <Container>
           <Row>
             <Column size={{md: "8"}} offset={{md:"2"}}>
               <div className="wp-content">
                 <SyntaxHighlight content={post.content.rendered} />
               </div>
+              <Section bg="black" color="white" style={{padding: "20px", borderRadius: "15px", textAlign: "center"}}>
+                <h3>About The Author</h3>
+                <PostAuthorBio
+                  author={
+                    {
+                      name: post._embedded.author[0].name,
+                      description: post._embedded.author[0].description,
+                      slug: post._embedded.author[0].slug,
+                      avatar: post._embedded.author[0].avatar_urls[96],
+                    }
+                  }
+                />
+              </Section>
             </Column>
           </Row>
         </Container>
@@ -78,25 +91,7 @@ export default function FullPost({ post }) {
           </Row>
         </Container>
       </Section>
-      <Section bg="black" color="white" style={{padding: "20px 0"}}>
-        <Container>
-          <Row>
-            <Column>
-              <h3>About The Author</h3>
-              <PostAuthorBio
-                author={
-                  {
-                    name: post._embedded.author[0].name,
-                    description: post._embedded.author[0].description,
-                    slug: post._embedded.author[0].slug,
-                    avatar: post._embedded.author[0].avatar_urls[96],
-                  }
-                }
-              />
-            </Column>
-          </Row>
-        </Container>
-      </Section>
+      
     </div>
   )
 }
