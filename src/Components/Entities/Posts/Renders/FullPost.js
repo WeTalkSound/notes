@@ -60,7 +60,7 @@ export default function FullPost({ post }) {
       <Section style={{padding: "50px 0"}}>
         <Container>
           <Row>
-            <Column>
+            <Column size={{md: "8"}} offset={{md:"2"}}>
               <div className="wp-content">
                 <SyntaxHighlight content={post.content.rendered} />
               </div>
@@ -68,7 +68,7 @@ export default function FullPost({ post }) {
           </Row>
         </Container>
       </Section>
-      <Section bg="accent" color="black" style={{padding: "20px 0"}}>
+      <Section bg="accent" color="black" style={{padding: "20px 0", textAlign: "center"}}>
         <Container>
           <Row>
             <Column>
