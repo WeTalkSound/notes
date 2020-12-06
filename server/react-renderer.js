@@ -45,13 +45,15 @@ exports.render = (routes) => {
                     res.writeHead(200, {'Content-Type': 'text/html'})
                     console.log(`SSR of ${req.path}`)
                     if(req.path.includes('/posts') || req.path === '/'){
+                      categories = await blogService.getCategories()
+                      if(match.includes(':slug')){
+                        let slug = req.path.replace('/posts/', '')
+                        currentPost = posts.find(post => post.slug === slug)
+                        currentPost = currentPost ? currentPost : await blogService.getPostBySlug(slug)
+                      }
+                      else {
                         posts = await blogService.getPosts()
-                        categories = await blogService.getCategories()
-                        if(match.includes(':slug')){
-                          let slug = req.path.replace('/posts/', '')
-                          currentPost = posts.find(post => post.slug === slug)
-                          currentPost = currentPost ? currentPost : await blogService.getPostBySlug(slug)
-                        }
+                      }
                     }
                 }
                 // console.log(posts)
