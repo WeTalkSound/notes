@@ -17,7 +17,7 @@ export default class BlogService {
         return data
     }
 
-    getPosts = async (limit=100, offset=0) => {
+    getPosts = async (limit=30, offset=0) => {
         console.log("Getting posts")
         let response = await fetch(this.POSTS_URL + "?_embed&per_page=" + limit, {
             method: 'GET'
